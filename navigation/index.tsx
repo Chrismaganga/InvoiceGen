@@ -1,13 +1,16 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { Modal } from 'react-native';
 
 import DrawerNavigator from './drawer-navigator';
-import Modal from '../screens/modal';
+
+
 
 export type RootStackParamList = {
   DrawerNavigator: undefined;
   Modal: undefined;
   TabNavigator: undefined;
+  GenModal: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();

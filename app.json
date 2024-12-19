@@ -1,45 +1,51 @@
 {
   "expo": {
     "name": "InvoiceGen",
-    "slug": "InvoiceGen",
+    "slug": "invoicegen",
     "version": "1.0.0",
-
     "web": {
       "favicon": "./assets/favicon.png"
     },
-
     "experiments": {
       "tsconfigPaths": true
     },
-
     "plugins": [
       [
         "expo-dev-launcher",
         {
           "launchMode": "most-recent"
         }
-      ]
+      ],
+      "expo-router",
+      "expo-barcode-scanner"
     ],
-
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-
     "userInterfaceStyle": "light",
-
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.maganga.InvoiceGen"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.maganga.InvoiceGen"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4145db4f-a59c-403c-8ffe-0a60521282c1"
       }
-    }
+    },
+    "owner": "maganga"
   }
 }

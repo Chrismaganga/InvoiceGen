@@ -15,23 +15,23 @@ export default function DrawerNavigator({ navigation }: Props) {
   return (
     <Drawer.Navigator>
       <Drawer.Screen
-        name="Home"
-        component={Home}
-        options={{
-          drawerIcon: ({ size, color }) => (
-            <Ionicons name="home-outline" size={size} color={color} />
-          ),
-        }}
+      name="Home"
+      component={Home}
+      options={{
+        drawerIcon: ({ size, color }) => (
+        <Ionicons name="home-outline" size={size} color={color} />
+        ),
+      }}
       />
       <Drawer.Screen
-        name="Tabs"
-        component={TabNavigator}
-        options={{
-          headerRight: () => <HeaderButton onPress={() => navigation.navigate('Modal')} />,
-          drawerIcon: ({ size, color }) => (
-            <MaterialIcons name="border-bottom" size={size} color={color} />
-          ),
-        }}
+      name="TabNavigator"
+      component={TabNavigator}
+      options={{
+        headerRight: () => <HeaderButton onPress={() => navigation.navigate('Modal')} />,
+        drawerIcon: ({ size, color }) => (
+        <MaterialIcons name="border-bottom" size={size} color={color} />
+        ),
+      }}
       />
     </Drawer.Navigator>
   );
